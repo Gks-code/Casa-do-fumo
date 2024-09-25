@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Oswald:wght@200..700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navigation">
+        <img class="logo" src="img/capa" alt="">
+        <ul id="web" class="nav-menu">
+            <li class="nav-item"><a href="#">Bombacha</a></li>
+            <li class="nav-item"><a href="#">Calçados</a></li>
+            <li class="nav-item"><a href="#">Chapéu e Boina</a></li>
+            <li class="nav-item"><a href="#">Chimarrão</a></li>
+            <li class="nav-item"><a href="#">Churrasco</a></li>
+            <li class="nav-item"><a href="#">Facas</a></li>
+        </ul>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/bornotiago bomba.webp" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/stanley geral.webp" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/stanley fumo.webp" alt="Imagem 3">
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <div class="produtos-top">
+        <!-- Produtos Aqui -->
+    </div>
+
+    <h1>Destaque</h1>
+
+    <section class="produtos-container">
+        <section class="produto">
+            <img src="img/stanley946ml-preto.webp" alt="Garrafa Térmica Stanley Classic - Preta" class="produto-imagem">
+            <h2 class="title">Garrafa Térmica Stanley Classic 946ml</h2>
+            <p class="preco">R$349,90</p>
+            <p class="parcelamento">6x de R$58,32 sem juros</p>
+            <div class="cores">
+                <span class="cor preto" data-cor="preto"></span>
+                <span class="cor verde" data-cor="verde"></span>
+                <span class="cor vermelho" data-cor="vermelha"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <section class="produto">
+            <img src="img/mateira-preto.webp" alt="Mateira Preta" class="produto-imagem">
+            <h2 class="title">Mateira Preta</h2>
+            <p class="preco">R$249,90</p>
+            <p class="parcelamento">6x de R$41,65 sem juros</p>
+            <div class="cores">
+                <span class="cor preto" data-cor="preto"></span>
+                <span class="cor marrom" data-cor="marrom"></span>
+                <span class="cor caramelo" data-cor="caramelo"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <section class="produto">
+            <img src="img/jaqueta-azul.webp" alt="Mateira Preta" class="produto-imagem">
+            <h2 class="title">Mateira Preta</h2>
+            <p class="preco">R$249,90</p>
+            <p class="parcelamento">6x de R$41,65 sem juros</p>
+            <div class="cores">
+                <span class="cor preto" data-cor="preto"></span>
+                <span class="cor azul" data-cor="azul"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <section class="produto">
+            <img src="img/bombacha-bege.webp" alt="Bombacha Bege" class="produto-imagem">
+            <h2 class="title">Bombacha Bege</h2>
+            <p class="preco">R$249,90</p>
+            <p class="parcelamento">6x de R$41,65 sem juros</p>
+            <div class="cores">
+                <span class="cor bege" data-cor="bege"></span>
+                <span class="cor verde" data-cor="verde"></span>
+                <span class="cor cinza" data-cor="cinza"></span>
+                <span class="cor azul" data-cor="azul"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <section class="produto">
+            <img src="img/pijama-rosa.webp" alt="Bombacha Bege" class="produto-imagem">
+            <h2 class="title">Bombacha Bege</h2>
+            <p class="preco">R$249,90</p>
+            <p class="parcelamento">6x de R$41,65 sem juros</p>
+            <div class="cores">
+                <span class="cor branco" data-cor="branco"></span>
+                <span class="cor rosa" data-cor="rosa"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <section class="produto">
+            <img src="img/bota-preto.webp" alt="Bombacha Bege" class="produto-imagem">
+            <h2 class="title">Bombacha Bege</h2>
+            <p class="preco">R$249,90</p>
+            <p class="parcelamento">6x de R$41,65 sem juros</p>
+            <div class="cores">
+                <span class="cor preto" data-cor="preto"></span>
+                <span class="cor amarelo" data-cor="amarelo"></span>
+            </div>
+            <button>Comprar</button>
+        </section>
+
+        <!-- Adicione os outros produtos aqui, seguindo o mesmo padrão -->
+    </section>
+
+
+  
+
+    <div class="col-sm-12 section-highlight">
+        
+            <img class="textbanner-image-background lazyautosizes fade-in" 
+                 src="img/chapeupeão.webp" 
+                 data-srcset="https://minhaempresa.com/imagens/meu-produto-480.webp 480w, 
+                             https://minhaempresa.com/imagens/meu-produto-640.webp 640w, 
+                             https://minhaempresa.com/imagens/meu-produto-1024.webp 1024w, 
+                             https://minhaempresa.com/imagens/meu-produto-1920.webp 1920w" 
+                 data-sizes="auto" 
+                 alt="Produtos de Alta Qualidade" 
+                 sizes="720px">
+           
+            <a href="http://www.empresaexemplo.com/produtos" 
+               title="Explore nossos produtos">
+                <div class="module-text pull-right">
+                    <h3 class="module-text-title">Produtos de Alta Qualidade</h3>
+                    <div class="module-text-paragraph">Descubra nossa linha de produtos desenvolvidos com as melhores tecnologias para atender suas necessidades.</div>
+                
+                </div>
+                <div class="button-module"> <div class="module-text-button btn btn-primary">Explore Agora</div> </div>
+            </a>
+            
+        
+    </div>
+    
+
+    
+    
+    
+
+
+
+
+
+    <script src="js/carrosel.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

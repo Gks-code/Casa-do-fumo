@@ -1,0 +1,479 @@
+* {
+    font-family: "Rajdhani", sans-serif;
+}
+
+.navigation {
+    background-color: white;
+    box-shadow: 0 0.1rem 0.5rem #c2bdbd;
+    padding: 18px;
+}
+
+.navigation {
+    display: flex;
+    /* Usar flexbox para alinhar a imagem e a lista */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    margin: 20px 0;
+    /* Espaçamento acima e abaixo do nav */
+}
+
+.logo {
+    width: 80px;
+    /* Define a largura desejada da imagem */
+    height: 50px;
+    /* Mantém a proporção da imagem */
+    object-fit: contain;
+    /* Garante que a imagem não seja cortada */
+    margin-right: 15px;
+    /* Espaço à direita da imagem */
+}
+
+.nav-menu {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    padding: 0;
+    /* Remove o padding padrão */
+    margin: 0;
+    /* Remove a margem padrão */
+}
+
+.nav-menu li {
+    display: inline;
+    /* Faz com que os itens da lista fiquem em linha */
+    margin: 0 15px;
+    /* Espaçamento entre os itens */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: #000;
+    /* Cor do texto */
+}
+
+
+
+@media (max-width: 768px) {
+    .produto-card {
+        width: 45%;
+        /* 2 produtos por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .produto-card {
+        width: 100%;
+        /* 1 produto por linha em telas muito pequenas */
+    }
+}
+
+
+.produto {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #f0e7e7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 250px;
+    /* Define a largura máxima da seção */
+    margin: 0 auto;
+    /* Centraliza a seção na página */
+}
+
+.produto img {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.produto h2 {
+    font-size: 18px;
+}
+
+.produto .preco {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.produto .parcelamento {
+    font-size: 18px;
+    color: #666;
+}
+
+.produto .cores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.produto .cor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.produto .cor.preto {
+    background-color: black;
+}
+
+.produto .cor.verde {
+    background-color: green;
+}
+
+.produto .cor.vermelho {
+    background-color: red;
+}
+
+.produto .cor.azul {
+    background-color: blue;
+}
+
+.produto .cor.marrom {
+    background-color: brown;
+}
+
+.produto .cor.caramelo {
+    background-color: #B8860B;
+}
+
+.produto .cor.bege {
+    background-color: bisque;
+}
+
+.produto .cor.cinza {
+    background-color:grey;
+}
+
+.produto .cor.branco {
+    background-color:rgb(255, 255, 255);
+}
+
+.produto .cor.rosa {
+    background-color:pink;
+}
+
+.produto .cor.amarelo {
+    background-color: yellow;
+}
+
+.produto button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 70px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #f0f0f0;
+    z-index: -10;
+}
+
+h1 {
+    position: relative;
+    /* Torna o elemento um contêiner para posicionamento absoluto */
+    text-align: center;
+    align-items: center;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    /* Ajusta a posição vertical da linha */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    /* Cor da linha */
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
+}
+
+.produto {
+    flex: 1;
+    max-width: 25%;
+    /* Remova margens e padding desnecessários */
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    /* Tamanho reduzido */
+    margin: auto;
+    /* Centraliza o carrossel */
+    overflow: hidden;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Imagem ocupa toda a área do carrossel */
+    border-radius: 10px;
+    /* Bordas arredondadas nas imagens */
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%; 
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+ 
+
+
+.produtos-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-top: 40px; /* Diminui a margem superior */
+}
+
+.produtos-desk {
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px; /* Adiciona um espaçamento menor entre os produtos */
+}
+
+.produtos-desk img {
+    width: 100%; /* Altera para 100% para preencher melhor */
+    border-radius: 8px;
+}
+
+.descricao {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px; /* Diminui o padding lateral */
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5px;
+    width: 90%; /* Define a largura da descrição */
+    margin-left: 20px; /* Centraliza horizontalmente */
+    margin-right: 20px; /* Centraliza horizontalmente */
+    margin-top: -20px;
+}
+
+
+.btn {
+    background-color: #020202; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 10px 70px; /* Espaçamento interno */
+    text-align: center; /* Centraliza texto */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Permite definir largura */
+    margin-top: 5px; /* Espaço acima do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+
+}
+
+.btn:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.produtos-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 50px; /* Margens de 50px nas laterais */
+}
+
+.produto-desk {
+    position: relative;
+    width: 20%; /* Diminuído para 20% */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-desk:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.textbanner {
+    text-decoration: none;
+    color: inherit;
+}
+
+.textbanner-image {
+    width: 100%;
+}
+
+.textbanner-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.textbanner-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+.textbanner-title {
+    font-size: 1.3em; /* Reduzido para 1.3em */
+    margin: 10px 0;
+}
+
+.textbanner-paragraph {
+    font-size: 0.85em; /* Reduzido para 0.85em */
+    margin-bottom: 10px;
+}
+
+.textbanner-button {
+    background-color: #000;
+    color: white;
+    padding: 8px 16px; /* Ajuste no padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.textbanner-button:hover {
+    background-color: #45a049;
+}
+
+
+
+.section-highlight {
+    position: relative;
+    margin: 20px 0; /* Espaçamento vertical */
+    padding: 20px; /* Espaçamento nas bordas da seção */
+    width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+ 
+
+.textbanner-image-background {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.placeholder-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+}
+
+.module-text {
+    position: absolute; /* Fica sobre a imagem */
+    bottom: 150px; /* Distância do fundo da imagem */
+    right: 50px; /* Distância da direita */
+    padding: 15px; /* Espaçamento interno */
+    max-width: 300px; /* Largura máxima da caixa de texto */
+    color: white; /* Cor do texto */
+    background-color: rgba(102, 101, 101, 0.366);
+}
+
+.module-text-title {
+    font-size: 1.5rem; /* Tamanho do título */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.module-text-paragraph {
+    font-size: 0.9rem; /* Tamanho do texto */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.button-module{
+    margin-left: 80px;
+    position: absolute; /* Fica sobre a imagem */
+    bottom: 120px; /* Distância do fundo da imagem */
+    right: 142px; /* Distância da direita */
+    padding: 15px; /* Espaçamento interno */
+    max-width: 300px; /* Largura máxima da caixa de texto */
+    color: white; /* Cor do texto */
+    
+}
+
+.module-text-button {
+    padding: 8px 16px; /* Tamanho do botão */
+    background-color: #007bff; /* Cor do botão */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.module-text-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .module-text-title {
+        font-size: 1.3rem; /* Ajuste de tamanho para telas menores */
+    }
+    
+    .module-text-paragraph {
+        font-size: 0.8rem; /* Ajuste de tamanho para telas menores */
+    }
+
+    .module-text-button {
+        padding: 6px 12px; /* Ajuste do botão */
+    }
+}
